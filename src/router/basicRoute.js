@@ -4,6 +4,7 @@ const Users = require('../model/registration')
 const router = express.Router();
 
 
+
 router.post('/signup', async (req, res) => {
 
     const user = new Users(req.body);
@@ -75,6 +76,7 @@ router.post('/user/logout', authen, async(req,res)=>{
     }
      
 });
+
 //this is for the page
 router.get('/Home', authen ,(req,res)=>{
     res.status(201).send("home Page")
